@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Regular';
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('assets/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('assets/fonts/Roboto-Regular.ttf');
+}
+
+:root{
+    --Charcoal : hsl(235, 18%, 26%);
+    --DarkSlate: hsl(234, 29%, 20%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato: hsl(4, 100%, 67%);
+    --Tomato-50: hsla(13, 100%, 75%, 0.532);
+}
+
+.display-none{
+    display: none !important;
+}
+
+.p{
+    font-size: 16px;
+    color: var(--DarkSlate);
+}
+
+.fw-400{
+    font-weight: 400;
+}
+
+.fw-700{
+    font-weight: 700;
+}
+
+.body-section{
+    overflow-x: hidden;
+    background-color: var(--Charcoal);
+    display: flex;
+    align-items: center;
+    height: 112vh;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+h1{
+    margin: 32px 0 16px;
+    font-size: 40px;
+    font-family: 'Roboto Bold';
+    color: var(--DarkSlate);
+}
+
+.parts ul{
+    margin: 16px 0 0 16px;
+}
+
+ul li{
+    font-size: 14px;
+    margin: 8px 0 0 16px;
+    color: var(--DarkSlate);
+    font-family: 'Roboto Regular';
+    list-style: url('assets/images/icon-list.svg');
+}
+
+.parts input[type='submit']{
+    margin: 0;
+    width: 96%;
+    border-radius: 8px;
+}
+
+input{
+    margin: 16px 0;
+    width: 90%;
+    padding:12px 8px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 2px;
+}
+
+.label p{
+    color: var(--Tomato);
+    font-size: 12px;
+}
+
+.error{
+    background-color: var(--Tomato-50);
+    color: var(--Tomato);
+    border: 2px solid var(--Tomato);
+}
+
+button{
+    margin: 0;
+    width: 95%;
+    color: var(--White);
+    background: var(--DarkSlate);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+button:hover{
+    background-color: var(--Tomato);
+    box-shadow: 0 0 5px var(--Tomato);
+    text-shadow: 0 0 5px var(--White);
+}
+
+
+@media (min-width: 675px) and (max-width: 1440px){
+    .wrapper {
+        background-color: var(--White);
+        align-items: center;
+        width: 650px;
+        height: 450px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .parts{
+        width: 48%;
+        height: 90%;
+        border-radius: 10px;
+    }
+
+    .label{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0 8px;
+        width: 90%;
+    }
+
+    .parts:first-child{
+        margin: 0 0 0 32px;
+    }
+
+    .parts:last-child{
+        width: 40%;
+        object-fit: cover;
+        background-position: 50% 31%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url('assets/images/illustration-sign-up-desktop.svg');
+        margin: 0 16px 0 0;
+    }
+
+    /* Thanks Page */
+
+    .thanks-page{
+        background: var(--White);
+        height: 400px;
+        display: flex;
+        width: 475px;
+        border-radius: 20px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 675px) {
+
+    h1{
+        margin: 32px 16px;
+        font-size: 40px;
+        font-family: 'Roboto Bold';
+        color: var(--DarkSlate);
+    }
+
+    p{
+        margin: 0 16px;
+    }
+    
+    .wrapper {
+        width: 100%;
+        background-color: var(--White);
+        height: 96%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .parts{
+        width: 100%;
+        height: 90%;    
+        border-radius: 0 0 16px 16px;
+    }
+
+    .parts:first-child{
+        margin: 0 8px;
+    }
+
+    .parts:last-child{
+        width: 100%;
+        height: 48%;
+        object-fit: cover;
+        background-position: 50% 31%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url('assets/images/illustration-sign-up-mobile.svg');
+    }
+
+    .parts ul {
+        margin: 16px 32px 0;
+    }
+
+    .label{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0 24px;
+        width: 90%;
+    }
+
+    input {
+        margin: 16px;
+        width: 80%;
+        padding: 16px;
+        border-radius: 4px;
+        border: none;
+        box-shadow: 0 0 2px;
+    }
+
+    .parts button {
+        margin: 16px;
+        width: 89%;
+        border-radius: 8px;
+    }
+
+    /* Thanks Page */
+
+    .thanks-page {
+        background: var(--White);
+        height: 96%;
+        display: flex;
+        width: 475px;
+        border-radius: 20px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .thanks-content{
+        width: 90%;
+    }
+
+    .thanks-content p{
+        margin: 0;
+    }
+
+    .button{
+        width: 90%;
+    }
+}
+
+
+
+.contents-container{
+    height: 80%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.thanks-content img{
+    width: 16%;
+}
+
+.thanks-content h1{
+    margin: 16px 0 16px;
+}
+
+button{
+    border: none;
+    padding: 12px 8px;
+    margin: 0;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Unneccessary */
+
+.attribution { 
+    font-size: 16px; 
+    text-align: center; 
+    color: var(--DarkSlate); 
+}
+
+.attribution a {     
+    color: var(--Tomato);
+    font-weight: 900;
+}
